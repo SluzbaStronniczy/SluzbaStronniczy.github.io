@@ -19,6 +19,7 @@
       "@/*": ["./*"],
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/common/components/*"],
+      "@layouts/*": ["./src/common/layouts/*"],
       "@images/*": ["./public/assets/images/*"]
     }
   },

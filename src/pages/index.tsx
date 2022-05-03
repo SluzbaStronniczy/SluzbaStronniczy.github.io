@@ -1,6 +1,6 @@
+import StronniczyLogo from "@images/logo.svg";
 import type { NextPage } from "next";
 import Head from "next/head";
-import VercelLogo from "@images/vercel.svg";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -61,7 +61,12 @@ const Home: NextPage = () => {
         >
           Powered by{" "}
           <span className={styles.logo}>
-            <img src={VercelLogo} alt="Vercel Logo" width={72} height={16} />
+            <img
+              src={StronniczyLogo}
+              alt="Vercel Logo"
+              width={300}
+              height={100}
+            />
           </span>
         </a>
       </footer>

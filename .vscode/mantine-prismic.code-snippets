@@ -1,0 +1,24 @@
+{
+  "prismicRichTextTitle": {
+    "prefix": "prismicrttitle",
+    "body": [
+      "<PrismicRichText",
+      "\tfield={${1:title}}",
+      "\tcomponents={{",
+      "\t\theading2: ({ children }) => ${2|<Fade {...FadeOptions}><Title order={2}>{children}</Title></Fade>,<Title order={2}>{children}</Title>|}",
+      "\t}}",
+      "/>"
+    ]
+  },
+  "prismicRichTextText": {
+    "prefix": "prismicrttext",
+    "body": [
+      "<PrismicRichText",
+      "\tfield={${1:description}}",
+      "\tcomponents={{",
+      "\t\tparagraph: ({ children }) => ${2|<Fade {...FadeOptions}><Text>{children}</Te></Fade>,<Text>{children}</Text>|}",
+      "\t}}",
+      "/>"
+    ]
+  }
+}

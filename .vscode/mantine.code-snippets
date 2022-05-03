@@ -1,0 +1,49 @@
+{
+  "className": {
+    "prefix": "cn",
+    "description": "Adds a className that takes the class from styles file.",
+    "body": "className={classes.$0}"
+  },
+  "classNameMultiple": {
+    "prefix": "cnx",
+    "description": "Adds a className that takes multiple classes from styles file.",
+    "body": "className={cx(classes.$0)}"
+  },
+  "sx": {
+    "prefix": "sx",
+    "description": "Add `sx` prop with default boilerplate.",
+    "body": "sx={(${1:theme}) => ({$0})}"
+  },
+  "container": {
+    "prefix": "c",
+    "body": "<Container$1>$0</Container>"
+  },
+  "box": {
+    "prefix": "b",
+    "body": "<Box$1>$0</Box>"
+  },
+  "boxAsComponent": {
+    "prefix": "bc",
+    "body": "<Box<$1> component={$1}$2>$0</Box>"
+  },
+  "text": {
+    "prefix": "te",
+    "body": "<Text$1>$0</Text>"
+  },
+  "textAsComponent": {
+    "prefix": "tec",
+    "body": "<Text<$1> component={$1}$2>$0</Text>"
+  },
+  "title": {
+    "prefix": "tt",
+    "body": "<Title order={$1}$2>$0</Title>"
+  },
+  "group": {
+    "prefix": "g",
+    "body": "<Group$1>$0</Group>"
+  },
+  "stack": {
+    "prefix": "s",
+    "body": "<Stack$1>$0</Stack>"
+  }
+}

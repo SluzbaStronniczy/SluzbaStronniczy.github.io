@@ -1,0 +1,41 @@
+{
+  "index": {
+    "prefix": "compindex",
+    "body": "export { default } from \"./${TM_DIRECTORY/.*[\\\\\\/](.*)$/$1/g}\";"
+  },
+  "vfc": {
+    "prefix": "compvfc",
+    "body": [
+      "import type { VFC } from \"react\";",
+      "",
+      "import { memo } from \"react\";",
+      "import { useStyles } from \"./${TM_DIRECTORY/.*[\\\\\\/](.*)$/${1:pascalcase}/g}.styles\"",
+      "",
+      "type ${TM_DIRECTORY/.*[\\\\\\/](.*)$/${1:pascalcase}/g}Props = {",
+      "\t$1",
+      "}",
+      "",
+      "const ${TM_DIRECTORY/.*[\\\\\\/](.*)$/${1:pascalcase}/g}: VFC<${TM_DIRECTORY/.*[\\\\\\/](.*)$/${1:pascalcase}/g}Props> = ({",
+      "\t$2",
+      "}) => {",
+      "\tconst { classes } = useStyles();",
+      "",
+      "\treturn (",
+      "\t\t$0",
+      "\t);",
+      "}",
+      "",
+      "export default memo(${TM_DIRECTORY/.*[\\\\\\/](.*)$/${1:pascalcase}/g});"
+    ]
+  },
+  "styles": {
+    "prefix": "compstyles",
+    "body": [
+      "import { createStyles } from \"@mantine/core\";",
+      "",
+      "export const useStyles = createStyles((theme) => ({",
+      "\t$0",
+      "}));"
+    ]
+  }
+}

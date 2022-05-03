@@ -1,0 +1,22 @@
+{
+  "fadeImports": {
+    "prefix": "fadeimports",
+    "body": [
+      "import type { FadeProps } from \"react-awesome-reveal\";",
+      "import { Fade } from \"react-awesome-reveal\";"
+    ]
+  },
+  "fadeOptions": {
+    "prefix": "fadeopts",
+    "body": [
+      "const FadeOptions: FadeProps = {",
+      "\ttriggerOnce: true,",
+      "\tfraction: 0.5,",
+      "};"
+    ]
+  },
+  "fade": {
+    "prefix": "fade",
+    "body": "<Fade {...FadeOptions}$1>$0</Fade>"
+  }
+}
