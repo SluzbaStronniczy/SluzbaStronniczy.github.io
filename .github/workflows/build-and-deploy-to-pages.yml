@@ -5,7 +5,6 @@ on:
       - main
 jobs:
   build:
-    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
@@ -32,7 +31,6 @@ jobs:
           touch out/.nojekyll
 
   deploy:
-    concurrency: ci-${{ githb.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy 🚀
