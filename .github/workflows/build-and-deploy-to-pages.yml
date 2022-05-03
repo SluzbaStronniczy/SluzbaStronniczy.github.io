@@ -4,14 +4,14 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  build:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3
 
-      - name: Cache
+      - name: Cache 📥
         uses: actions/cache@v2
         with:
           path: |
@@ -31,6 +31,10 @@ jobs:
           npm run export
           touch out/.nojekyll
 
+  deploy:
+    concurrency: ci-${{ githb.ref }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
