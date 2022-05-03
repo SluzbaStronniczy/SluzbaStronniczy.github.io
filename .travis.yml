@@ -6,6 +6,7 @@ node_js:
 cache:
   directories:
   - node_modules # Cache the node_modules folder for quicker build times
+  - .next/cache
 script:
   - npm run build # Runs next build
   - npm run export # Runs next export and generates the out directory
@@ -16,7 +17,4 @@ deploy:
   github_token: $github_token # GitHub access token to use when pushing to the gh-pages branch
   local_dir: out # Directory to push to the gh-pages branch
   on:
-    # Only deploy when the build is on master or main branch - two common default branch names
-    # If you're using a different branch name, add it here
-    all_branches: true
-    condition: $TRAVIS_BRANCH =~ ^(master|main)$:3
+    branch: main
