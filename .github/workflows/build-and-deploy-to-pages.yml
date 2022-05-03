@@ -28,12 +28,11 @@ jobs:
           npm ci
           npm run build
           npm run export
+
+      - name: NO JEKYLL! ✋
+        run: |
           touch out/.nojekyll
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
